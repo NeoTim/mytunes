@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>    
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <blockquote><h1>myTunes
+            <small>2014-06</small>
+            </h1>
+          </blockquote>
+        </div>
+      </div>
+      <div id="main" class="row">
+        
+      </div>
+    </div>
+      <!--   <div class="col-md-4">
+          <blockquote id="sidebar">
+            <h2> Queue </h2>
+          </blockquote>
+        </div>
+        <div class="col-md-8">
+          <blockquote id="main">
+            <h2>Library</h2>
+          </blockquote>
+        </div> -->
+
+
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
-
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="data/data.js"></script>
 
     <script src="models/SongModel.js"></script>
@@ -30,7 +59,7 @@
         var appView = new AppView({model: app});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('#main').append(appView.render());
       });
     </script>
   </body>
